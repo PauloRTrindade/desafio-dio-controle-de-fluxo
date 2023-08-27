@@ -28,8 +28,13 @@ public class Contador {
 		if (parametroUm > parametroDois) {
 			throw new ParametrosInvalidosException("O segundo parâmetro deve ser maior que o primeiro.");
 		}
+		
 		int contagem = parametroDois - parametroUm;
-
+		
+		if(contagem == 0) {
+			System.out.println("A diferença na subtração dos dois números é 0.");
+		}
+		
 		for (int i = 1; i <= contagem; i++) {
 			System.out.println("Imprimindo o número " + i);
 		}
